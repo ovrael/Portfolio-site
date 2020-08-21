@@ -3,36 +3,63 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - RazorPages</title>
+    <title>@ViewData["Title"] - J. Jendrzejewski</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/myStyles.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style="background: rgb(15,0,25); background: linear-gradient(0deg, rgba(15,0,25,1) 0%, rgba(13,13,13,1) 60%);">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">RazorPages</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-toggleable-lg box-shadow mb-3" style="background-image: url(../Images/Navbar/Spacev6.png); border-radius:0px 0px 10px 10px">
+                <span class="jaappoki-navbar navbar-brand mb-0 h1">Jacek Jendrzejewski</span>
+                <button class="navbar-dark navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <div class="container">
+                                <a class=" jaappoki-navbar text-nowrap" asp-area="" asp-page="/Index">
+                                    <img src="~/Images/Navbar/Marsv2.png">
+                                    Home
+                                </a>
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/AboutMe">About Me</a>
+                            <div class="container">
+                                <a class="jaappoki-navbar text-nowrap" asp-area="" asp-page="/AboutMe">
+                                    <img src="~/Images/Navbar/Ziemiav2.png">
+                                    About me
+                                </a>
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <div class="container">
+                                <a class="jaappoki-navbar text-nowrap" asp-area="" asp-page="/Projects">
+                                    <img src="~/Images/Navbar/Jowiszv3.png">
+                                    Projects
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="container">
+                                <a class="jaappoki-navbar text-nowrap" asp-area="" asp-page="/Contact">
+                                    <img src="~/Images/Navbar/Saturnv2.png">
+                                    Contact
+                                </a>
+                            </div>
                         </li>
                     </ul>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
-    <div class="container">
+    <div class="container-fluid top-gap">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>

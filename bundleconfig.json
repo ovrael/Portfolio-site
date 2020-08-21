@@ -1,0 +1,20 @@
+[
+  {
+    "outputFileName": "#\\ASP\\PortfolioSite\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.min.css",
+    "inputFiles": [
+      "#\\ASP\\PortfolioSite\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    ]
+  },
+  {
+    "outputFileName": "#\\ASP\\PortfolioSite\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+    "inputFiles": [
+      "#\\ASP\\PortfolioSite\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    ]
+  },
+  {
+    "outputFileName": "#\\ASP\\PortfolioSite\\wwwroot\\css\\site.min.css",
+    "inputFiles": [
+      "#\\ASP\\PortfolioSite\\wwwroot\\css\\site.css"
+    ]
+  }
+]

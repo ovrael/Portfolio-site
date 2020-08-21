@@ -1,0 +1,145 @@
+﻿.project {
+    height: 100%;
+    margin-top: 5px;
+    padding-bottom: 10px;
+}
+
+.project-button {
+    height: 20%;
+    margin-bottom: 15px
+}
+
+.xy-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.y-center {
+    display: flex;
+    align-items: center;
+}
+
+.x-center {
+    display: flex;
+    justify-content: center;
+}
+
+.top-gap {
+    margin-top: 30px;
+}
+
+.top-small-gap {
+    margin-top: 10px;
+}
+
+.row-paddings {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.padding-all-15 {
+    padding: 15px 15px;
+}
+
+.left-padding-0 {
+    padding-left: 0px;
+}
+
+.lp15-rp0 {
+    padding-left: 15px;
+    padding-right: 0px;
+}
+
+.padding-right-left-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.margin-bot-0 {
+    margin-bottom: 0px;
+}
+
+.margin-right-left-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.margin-right-left-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-description {
+    font-family: Arial;
+    text-shadow: 0px 0px 2px #000000;
+}
+
+.project-picture-padding-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.projects-buttons {
+    height: 30%;
+    flex-direction: column;
+}
+
+.jaappoki-font {
+    color: rgba(90, 122, 209, 0.75);
+    font-family: 'Jaapokki subtract';
+}
+
+.jaappoki-navbar {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Jaapokki enchance';
+}
+
+.roboto-thick-font {
+    color: rgba(150, 150, 150, 0.75);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+.roboto-button-font {
+    color: rgba(196, 53, 53, 0.55);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.roboto-thin-font {
+    color: rgba(150, 150, 150, 0.75);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.custom-border {
+    border: 3px solid red;
+}
+
+.project-language {
+    position: absolute;
+    bottom: 0;
+}
+
+.glass-window {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px 10px;
+}
+
+.glass-window-personality {
+    background-color: rgba(150, 50, 50, 0.1);
+    border-radius: 5px 5px;
+}
+
+.exo2-font {
+    color: rgba(90, 122, 209, 0.75);
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 400;
+}
+
+.square-250px {
+    width: 250px;
+    height: 250px;
+}

@@ -1,0 +1,101 @@
+﻿@page
+@model PortfolioSite.Pages.ProjectsModel
+@using RazorPages;
+@using System;
+@using PortfolioSite.Models;
+@{
+    ViewData["Title"] = "Projects";
+}
+
+@{
+    for (int j = 0; j < Program.projectsLists.Count; j++)
+    {
+        List<ProjectWindow> actualList = Program.projectsLists[j];
+
+        string sectionTitle = string.Empty;
+        string sectionID = string.Empty;
+
+        switch (j)
+        {
+            case 0:
+                sectionID = "DoneProjects";
+                sectionTitle = "Done projects!";
+                break;
+            case 1:
+                sectionID = "WIPProjects";
+                sectionTitle = "Current projects.";
+                break;
+            case 2:
+                sectionID = "FutureProjects";
+                sectionTitle = "Future projects!";
+                break;
+        }
+
+        <div id=@sectionID>
+            <div class="container">
+                <div class="col-12">
+                    <p class="text-center h1 jaappoki-font">
+                        @sectionTitle
+                    </p>
+                </div>
+
+                @{
+                    for (int i = 0; i < actualList.Count; i++)
+                    {
+                        <div class="row margin-right-left-0 glass-window" style="margin-bottom:60px">
+
+                            <div class="col-lg-4 col-md-12 col-sm-12 col-12 order-last order-lg-first y-center project-picture-padding-0">
+                                <img src=@actualList[i].picturePath alt=@actualList[i].title class="img-fluid" />
+                            </div>
+
+                            <div class="col-lg-8 col-md-12 col-sm-12 col-12 order-first order-lg-last">
+                                <div class="row h-100">
+                                    <div class="col-lg-11 col-md-10 col-sm-9 col-9 top-small-gap">
+                                        <h2 class="jaappoki-font">
+                                            @actualList[i].title
+                                        </h2>
+                                        <p class="roboto-thin-font">
+                                            Type: @actualList[i].projectType
+                                        </p>
+                                        <p class="roboto-thin-font">
+                                            @actualList[i].description
+                                        </p>
+                                        <p class="roboto-thin-font" style="bottom: 0;">
+                                            Languages: @actualList[i].language
+                                        </p>
+                                    </div>
+
+                                    @{
+                                        if (j < Program.projectsLists.Count - 1)
+                                        {
+                                            <div class="col-lg-1 col-md-2 col-sm-3 col-3 justify-content-center">
+
+                                                <div class="d-flex" style="height: 12.5%;"></div>
+
+                                                <div class="d-flex justify-content-center flex-column projects-buttons">
+                                                    <a class="btn btn-sm d-flex justify-content-center" href="" onclick="window.open('@actualList[i].youtubeLink','_blank')" role="button">
+                                                        <img src="~/Images/Icons/YT.png" alt="YouTube" />
+                                                    </a>
+                                                </div>
+
+                                                <div class="d-flex" style="height: 15%;"></div>
+
+                                                <div class="d-flex justify-content-center flex-column projects-buttons">
+                                                    <a class="btn btn-sm d-flex justify-content-center" href="" onclick="window.open('@actualList[i].githubLink','_blank')" role="button">
+                                                        <img src="~/Images/Icons/GH.png" alt="GitHub" />
+                                                    </a>
+                                                </div>
+
+                                                <div class="d-flex" style="height: 12.5%;"></div>
+                                            </div>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    }
+}

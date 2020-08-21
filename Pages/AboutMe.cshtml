@@ -1,8 +1,166 @@
 ﻿@page
 @model RazorPages.Pages.AboutMeModel
+@using RazorPages;
+@using System;
 @{
     ViewData["Title"] = "About Me";
 }
 
-<h1>AboutMe</h1>
+<div class="container">
+    <div class="row" style="margin-right:0px;">
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3 y-center">
+            <img src="~/Images/Other/MeOnev2.jpg" class="img-fluid" />
+        </div>
+        <div class="col-12 col-sm-12 col-md-9 col-lg-9 y-center padding-all-15 glass-window">
+            <div class="row margin-right-left-0">
+                <div class="col-12 y-center">
+                    <p class="text-center my-auto mx-auto roboto-thin-font">
+                        Hi! My name is Jacek. <br />
+                        I am interested in mathematics and IT. So when you combine them you will get math programs :> <br />
+                        C# is my love but I am going to (learn) make programs in C++/Java/Python as well.<br />
+                        Web developing is not my strong side so is graphics but I try to improve them! <br />
+                    </p>
+                </div>
+                <div class="col-12 y-center top-gap">
+                    <h5 class="text-center my-auto mx-auto roboto-thin-font">
+                        More Private :P
+                    </h5>
+                </div>
+                <div class="col-12 y-center">
+                    <p class="text-center my-auto mx-auto roboto-thin-font">
+                        I train capoeira since 2015 and I teach others since 2019. I encourage everyone to try it! <br />
+                        I love other physical activities such as swimming, cycling and skiing. (I've got in plans to learn surfing.)  <br />
+                        I'm a bookworm, so keep your books in safe place! Otherwise, I will read 'em all! <br />
+                        I play video games in my spare time. Mainly it is Dota 2.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="row">
+        @{
+            Random rand = new Random();
+            int windowsToShow = Program.personalities.Count;
+
+            for (int i = 0; i < windowsToShow; i++)
+            {
+                int index = i;
+
+                string carouselNumber = "carousel" + Convert.ToString(index);
+
+                int firstIntreval = rand.Next(4000, 8000);
+                int secondInterval = rand.Next(8000, 12000);
+
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center y-center top-gap">
+                    <div id="@carouselNumber" class="carousel carousel-fade margin-right-left-auto" data-ride="carousel">
+                        <div class="carousel-inner square-250px glass-window">
+                            <div class="carousel-item active" data-interval="@firstIntreval">
+                                <div class="col-12 square-250px">
+                                    <div class="row h-100">
+                                        <div class="col-12 my-auto mx-auto">
+                                            <img src="@Program.personalities[index].IconPath" class="img-fluid">
+                                            <h4 class="top-small-gap jaappoki-font">
+                                                @Program.personalities[index].Header
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-interval="@secondInterval">
+                                <div class="col-12 my-auto y-center square-250px">
+                                    <div class="col-12 y-center padding-right-left-0">
+                                        <p class="text-center my-auto mx-auto roboto-thin-font" style="font-size: 16px; text-align:justify">
+                                            @Program.personalities[index].Description
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev square-250px" href="#@carouselNumber" role="button" data-slide="prev"></a>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+
+    <!-- TECHNOLOGIES TILE  -->
+    <div class="col-12 top-gap">
+        <div class="row padding-all-15 glass-window">
+            <div class="col-12">
+                <h3 class="jaappoki-font">
+                    Technologies
+                </h3>
+            </div>
+
+            <div class="col-md-4 col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <h4 class="jaappoki-font">
+                            Known
+                        </h4>
+                    </div>
+                    <div class="col-12">
+                        <p class="roboto-thin-font">
+                            I know them and I use them frequently.
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <ul class="list-group-flush left-padding-0">
+                            <li class="list-group-item roboto-thin-font" style="background-color: transparent;">C#</li>
+                            <li class="list-group-item roboto-thin-font" style="background-color: transparent;">WPF / WinForms</li>
+                            <li class="list-group-item roboto-thin-font" style="background-color: transparent;">Unity</li>
+                            <li class="list-group-item roboto-thin-font" style="background-color: transparent;">Microsoft Office</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-12">
+                <div class="row">
+                    <div class="col-12 jaappoki-font">
+                        <h4>
+                            Learning
+                        </h4>
+                    </div>
+                    <div class="col-12 roboto-thin-font">
+                        <p>
+                            I am learning them or I do not use them often.
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <ul class="list-group-flush left-padding-0">
+                            <li class="list-group-item roboto-thin-font" style="background-color: transparent;">Azure</li>
+                            <li class="list-group-item roboto-thin-font" style="background-color: transparent;">Git / GitHub</li>
+                            <li class="list-group-item roboto-thin-font" style="background-color: transparent;">C++</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <h4 class="jaappoki-font">
+                            In plans
+                        </h4>
+                    </div>
+                    <div class="col-12">
+                        <p class="roboto-thin-font">
+                            I am going to learn them.
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <ul class="list-group-flush left-padding-0">
+                            <li class="list-group-item roboto-thin-font" style="background-color: transparent;">Java</li>
+                            <li class="list-group-item roboto-thin-font" style="background-color: transparent;">JavaScript</li>
+                            <li class="list-group-item roboto-thin-font" style="background-color: transparent;">Xamarin</li>
+                            <li class="list-group-item roboto-thin-font" style="background-color: transparent;">Docker</li>
+                            <li class="list-group-item roboto-thin-font" style="background-color: transparent;">Python</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
