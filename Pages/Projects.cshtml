@@ -65,28 +65,58 @@
                                         </p>
                                     </div>
 
+                                    @*@{
+                                            if (j < Program.projectsLists.Count - 1)
+                                            {
+                                                string space = "40%";
+                                                <div class="col-lg-1 col-md-2 col-sm-3 col-3 justify-content-center">
+                                                    @{
+                                                        if (@actualList[i].youtubeLink != "none")
+                                                        {
+                                                            <div class="d-flex" style="height: 12.5%;"></div>
+
+                                                            <div class="d-flex justify-content-center flex-column projects-buttons">
+                                                                <a class="btn btn-sm d-flex justify-content-center" href="" onclick="window.open('@actualList[i].youtubeLink','_blank')" role="button">
+                                                                    <img src="~/Images/Icons/YT.png" alt="YouTube" />
+                                                                </a>
+                                                            </div>
+                                                            space = "15%";
+                                                        }
+                                                    }
+                                                    <div class="d-flex" style="height: @space"></div>
+                                                    <div class="d-flex justify-content-center flex-column projects-buttons">
+                                                        <a class="btn btn-sm d-flex justify-content-center" href="" onclick="window.open('@actualList[i].githubLink','_blank')" role="button">
+                                                            <img src="~/Images/Icons/GH.png" alt="GitHub" />
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="d-flex" style="height: 12.5%;"></div>
+                                                </div>
+                                            }
+                                        }*@
+
                                     @{
                                         if (j < Program.projectsLists.Count - 1)
                                         {
+                                            string githubHeight = "100%";
                                             <div class="col-lg-1 col-md-2 col-sm-3 col-3 justify-content-center">
+                                                @{
+                                                    if (@actualList[i].youtubeLink != "none")
+                                                    {
+                                                        <div class="col-12 xy-center" style="height:50%">
+                                                            <a class="btn btn-sm d-flex justify-content-center" href="" onclick="window.open('@actualList[i].youtubeLink','_blank')" role="button">
+                                                                <img src="~/Images/Icons/YT.png" alt="YouTube" />
+                                                            </a>
+                                                        </div>
+                                                        githubHeight = "50%";
+                                                    }
+                                                }
 
-                                                <div class="d-flex" style="height: 12.5%;"></div>
-
-                                                <div class="d-flex justify-content-center flex-column projects-buttons">
-                                                    <a class="btn btn-sm d-flex justify-content-center" href="" onclick="window.open('@actualList[i].youtubeLink','_blank')" role="button">
-                                                        <img src="~/Images/Icons/YT.png" alt="YouTube" />
-                                                    </a>
-                                                </div>
-
-                                                <div class="d-flex" style="height: 15%;"></div>
-
-                                                <div class="d-flex justify-content-center flex-column projects-buttons">
+                                                <div class="col-12 xy-center" style="height:@githubHeight">
                                                     <a class="btn btn-sm d-flex justify-content-center" href="" onclick="window.open('@actualList[i].githubLink','_blank')" role="button">
                                                         <img src="~/Images/Icons/GH.png" alt="GitHub" />
                                                     </a>
                                                 </div>
-
-                                                <div class="d-flex" style="height: 12.5%;"></div>
                                             </div>
                                         }
                                     }
