@@ -9,7 +9,7 @@
 <div class="container">
     <div class="row" style="margin-right:0px;">
         <div class="col-12 col-sm-12 col-md-3 col-lg-3 y-center">
-            <img src="~/Images/Other/MeOnev2.jpg" class="img-fluid" />
+            <img src="~/Images/Other/MeDog1.jpg" class="img-fluid" />
         </div>
         <div class="col-12 col-sm-12 col-md-9 col-lg-9 y-center padding-all-15 glass-window">
             <div class="row margin-right-left-0">
@@ -52,34 +52,34 @@
                 int firstIntreval = rand.Next(4000, 8000);
                 int secondInterval = rand.Next(8000, 12000);
 
-                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center y-center top-gap">
-                    <div id="@carouselNumber" class="carousel carousel-fade margin-right-left-auto" data-ride="carousel">
-                        <div class="carousel-inner square-250px glass-window">
-                            <div class="carousel-item active" data-interval="@firstIntreval">
-                                <div class="col-12 square-250px">
-                                    <div class="row h-100">
-                                        <div class="col-12 my-auto mx-auto">
-                                            <img src="@Program.personalities[index].IconPath" class="img-fluid">
-                                            <h4 class="top-small-gap jaappoki-font">
-                                                @Program.personalities[index].Header
-                                            </h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item" data-interval="@secondInterval">
-                                <div class="col-12 my-auto y-center square-250px">
-                                    <div class="col-12 y-center padding-right-left-0">
-                                        <p class="text-center my-auto mx-auto roboto-thin-font" style="font-size: 16px; text-align:justify">
-                                            @Program.personalities[index].Description
-                                        </p>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center y-center top-gap">
+                <div id="@carouselNumber" class="carousel carousel-fade margin-right-left-auto" data-ride="carousel">
+                    <div class="carousel-inner square-250px glass-window">
+                        <div class="carousel-item active" data-interval="@firstIntreval">
+                            <div class="col-12 square-250px">
+                                <div class="row h-100">
+                                    <div class="col-12 my-auto mx-auto">
+                                        <img src="@Program.personalities[index].IconPath" class="img-fluid">
+                                        <h4 class="top-small-gap jaappoki-font">
+                                            @Program.personalities[index].Header
+                                        </h4>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <a class="carousel-control-prev square-250px" href="#@carouselNumber" role="button" data-slide="prev"></a>
+                        <div class="carousel-item" data-interval="@secondInterval">
+                            <div class="col-12 my-auto y-center square-250px">
+                                <div class="col-12 y-center padding-right-left-0">
+                                    <p class="text-center my-auto mx-auto roboto-thin-font" style="font-size: 16px; text-align:justify">
+                                        @Program.personalities[index].Description
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <a class="carousel-control-prev square-250px" href="#@carouselNumber" role="button" data-slide="prev"></a>
                 </div>
+            </div>
             }
         }
     </div>
